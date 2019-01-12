@@ -56,6 +56,9 @@ target_link_libraries(tiff2bw tiff port)
 add_executable(tiff2pdf tiff2pdf.c)
 target_link_libraries(tiff2pdf tiff port)
 
+add_executable(tiff2pdf_lite tiff2pdf_lite.c)
+target_link_libraries(tiff2pdf_lite tiff port)
+
 add_executable(tiff2ps tiff2ps.c)
 target_link_libraries(tiff2ps tiff port)
 

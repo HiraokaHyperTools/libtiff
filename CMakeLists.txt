@@ -75,6 +75,13 @@ set(tiff_VERSION_MAJOR "${LIBTIFF_MAJOR_VERSION}")
 set(tiff_VERSION_MINOR "${LIBTIFF_MINOR_VERSION}")
 set(tiff_VERSION_PATCH "${LIBTIFF_MICRO_VERSION}")
 
+if (STATIC)
+  message(STATUS "Static build on Windows")
+  set(BUILD_SHARED_LIBS OFF)
+  set(CMAKE_EXE_LINKER_FLAGS "-static")
+  set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+endif()
+
 # the other tiff_VERSION_* variables are set automatically
 set(tiff_VERSION_ALPHA "${LIBTIFF_ALPHA_VERSION}")
 # Library version (unlike libtool's baroque scheme, WYSIWYG here)

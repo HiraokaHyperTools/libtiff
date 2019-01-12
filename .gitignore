@@ -56,3 +56,5 @@ tools/tiffinfo
 tools/tiffmedian
 tools/tiffset
 tools/tiffsplit
+
+/MinGW
